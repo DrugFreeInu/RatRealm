@@ -18,7 +18,7 @@
       position: relative;
       width: 100%;
       overflow: hidden;
-      perspective: 700px; /* tighter perspective */
+      perspective: 700px;
     }
 
     .planet {
@@ -28,7 +28,7 @@
 
     .logo {
       position: absolute;
-      top: 36%; /* lift into sky */
+      top: 40%; /* ← bring back into sky */
       left: 50%;
 
       transform:
@@ -51,6 +51,7 @@
     @media (max-width: 600px) {
       .logo {
         width: 88%;
+        top: 42%;
         transform:
           translate(-50%, -50%)
           scaleX(1.04)

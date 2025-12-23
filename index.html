@@ -18,7 +18,6 @@
       position: relative;
       width: 100%;
       overflow: hidden;
-      perspective: 700px;
     }
 
     .planet {
@@ -28,36 +27,33 @@
 
     .logo {
       position: absolute;
-      top: 23%; /* ← centered in sky haze */
+      top: 22%;            /* sky placement – already dialed */
       left: 50%;
 
       transform:
         translate(-50%, -50%)
-        scaleX(1.06)
-        scaleY(0.94)
-        rotateX(32deg)
-        translateZ(80px);
-
-      transform-origin: center center;
+        scaleX(1.06);       /* slight world-scale stretch */
 
       width: 72%;
       max-width: 900px;
 
-      mix-blend-mode: multiply;
-      opacity: 0.95;
+      /* 🔥 KEY FIXES */
+      opacity: 1;          /* FULL COLOR */
+      mix-blend-mode: normal; /* NO COLOR LOSS */
+
+      /* subtle depth, not glow */
+      filter: drop-shadow(0 6px 12px rgba(0,0,0,0.35));
+
       pointer-events: none;
     }
 
     @media (max-width: 600px) {
       .logo {
         width: 88%;
-        top: 23%; /* keep mobile aligned */
+        top: 24%;
         transform:
           translate(-50%, -50%)
-          scaleX(1.04)
-          scaleY(0.95)
-          rotateX(28deg)
-          translateZ(60px);
+          scaleX(1.04);
       }
     }
   </style>
@@ -73,7 +69,7 @@
       class="logo"
     >
 
-    <!-- PLANET IMAGE -->
+    <!-- PLANET -->
     <img
       src="B9A52788-D82C-425A-B3BC-4073B1DD7AA7.png"
       alt="Rat Realm Planet"

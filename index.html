@@ -28,7 +28,7 @@
 
     .logo {
       position: absolute;
-      top: 30%; /* ← bring back into sky */
+      top: 30%; /* SKY placement */
       left: 50%;
 
       transform:
@@ -48,10 +48,11 @@
       pointer-events: none;
     }
 
+    /* MOBILE */
     @media (max-width: 600px) {
       .logo {
         width: 88%;
-        top: 42%;
+        top: 30%; /* ← FIXED: no override anymore */
         transform:
           translate(-50%, -50%)
           scaleX(1.04)
@@ -73,7 +74,7 @@
       class="logo"
     >
 
-    <!-- PLANET -->
+    <!-- PLANET IMAGE -->
     <img
       src="B9A52788-D82C-425A-B3BC-4073B1DD7AA7.png"
       alt="Rat Realm Planet"

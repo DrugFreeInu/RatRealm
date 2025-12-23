@@ -1,83 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Rat Realm</title>
+<meta charset="UTF-8">
+<title>Rat Realm</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  background: #070000;
+  font-family: system-ui, sans-serif;
+}
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #070000;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
-    }
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  perspective: 800px; /* stronger */
+}
 
-    .hero {
-      position: relative;
-      width: 100%;
-      overflow: hidden;
-    }
+.planet {
+  width: 100%;
+  display: block;
+}
 
-    .planet {
-      width: 100%;
-      display: block;
-    }
+.logo {
+  position: absolute;
+  top: 42%;
+  left: 50%;
 
-    .logo {
-      position: absolute;
-      top: 42%;               /* slightly higher = sky zone */
-      left: 50%;
+  transform:
+    translate(-50%, -50%)
+    scaleX(1.08)
+    scaleY(0.96)
+    rotateX(28deg)
+    translateZ(60px);
 
-      transform:
-        translate(-50%, -50%)
-        scaleX(1.08);         /* ↓ reduced so letters stay true */
+  width: 72%;
+  max-width: 900px;
 
-      width: 70%;
-      max-width: 900px;
-
-      mix-blend-mode: multiply;
-      opacity: 0.95;          /* stabilizes color perception */
-      pointer-events: none;
-    }
-
-    /* subtle arc illusion without distortion */
-    .logo::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-    }
-
-    @media (max-width: 600px) {
-      .logo {
-        width: 88%;
-        transform:
-          translate(-50%, -50%)
-          scaleX(1.05);
-      }
-    }
-  </style>
+  mix-blend-mode: multiply;
+  opacity: 0.95;
+  pointer-events: none;
+}
+</style>
 </head>
+
 <body>
+<div class="hero">
 
-  <div class="hero">
+  <img src="2C1FAF11-9911-4C78-8981-5A03D758E202.png" class="logo">
+  <img src="B9A52788-D82C-425A-B3BC-4073B1DD7AA7.png" class="planet">
 
-    <!-- LOGO (text image only) -->
-    <img
-      src="2C1FAF11-9911-4C78-8981-5A03D758E202.png"
-      alt="Rat Realm"
-      class="logo"
-    >
-
-    <!-- PLANET -->
-    <img
-      src="B9A52788-D82C-425A-B3BC-4073B1DD7AA7.png"
-      alt="Rat Realm Planet"
-      class="planet"
-    >
-
-  </div>
-
+</div>
 </body>
 </html>

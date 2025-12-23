@@ -28,7 +28,7 @@
 
     .logo {
       position: absolute;
-      top: 30%; /* SKY placement */
+      top: 26%; /* ← fully into sky */
       left: 50%;
 
       transform:
@@ -48,11 +48,10 @@
       pointer-events: none;
     }
 
-    /* MOBILE */
     @media (max-width: 600px) {
       .logo {
         width: 88%;
-        top: 30%; /* ← FIXED: no override anymore */
+        top: 26%; /* keep mobile aligned */
         transform:
           translate(-50%, -50%)
           scaleX(1.04)

@@ -14,37 +14,38 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Helvetica, Arial, sans-serif;
     }
 
-    /* container at top */
     .hero {
       position: relative;
       width: 100%;
       overflow: hidden;
     }
 
-    /* planet image */
     .planet {
       width: 100%;
       display: block;
     }
 
-    /* RAT REALM text image */
     .logo {
       position: absolute;
-      top: 40px;
+      top: 46%;
       left: 50%;
-      transform: translateX(-50%);
-      width: 60%;
-      max-width: 600px;
+      transform:
+        translate(-50%, -50%)
+        scaleX(1.25); /* ← stretch */
 
-      /* removes white background */
+      width: 72%;
+      max-width: 900px;
+
       mix-blend-mode: multiply;
       pointer-events: none;
     }
 
     @media (max-width: 600px) {
       .logo {
-        width: 80%;
-        top: 24px;
+        width: 90%;
+        transform:
+          translate(-50%, -50%)
+          scaleX(1.15);
       }
     }
   </style>
@@ -52,14 +53,12 @@
 <body>
 
   <div class="hero">
-    <!-- RAT REALM wordmark -->
     <img
       src="2C1FAF11-9911-4C78-8981-5A03D758E202.png"
       alt="Rat Realm"
       class="logo"
     >
 
-    <!-- Planet image -->
     <img
       src="B9A52788-D82C-425A-B3BC-4073B1DD7AA7.png"
       alt="Rat Realm Planet"

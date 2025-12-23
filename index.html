@@ -25,27 +25,34 @@
       display: block;
     }
 
-    .logo {
+    /* --- CURVED SKY TITLE --- */
+    .sky-title {
       position: absolute;
-      top: 46%;
-      left: 50%;
-      transform:
-        translate(-50%, -50%)
-        scaleX(1.25); /* ← stretch */
-
-      width: 72%;
-      max-width: 900px;
-
-      mix-blend-mode: multiply;
+      top: 6%;
+      left: 0;
+      width: 100%;
+      height: 260px;
       pointer-events: none;
+      z-index: 2;
+    }
+
+    .sky-title text {
+      fill: #7a0f0f;
+      font-size: 88px;
+      font-weight: 700;
+      letter-spacing: 12px;
+      mix-blend-mode: multiply;
     }
 
     @media (max-width: 600px) {
-      .logo {
-        width: 90%;
-        transform:
-          translate(-50%, -50%)
-          scaleX(1.15);
+      .sky-title {
+        top: 8%;
+        height: 200px;
+      }
+
+      .sky-title text {
+        font-size: 64px;
+        letter-spacing: 8px;
       }
     }
   </style>
@@ -53,17 +60,28 @@
 <body>
 
   <div class="hero">
-    <img
-      src="2C1FAF11-9911-4C78-8981-5A03D758E202.png"
-      alt="Rat Realm"
-      class="logo"
-    >
 
+    <!-- CURVED RAT REALM TITLE -->
+    <svg class="sky-title" viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet">
+      <path
+        id="horizonPath"
+        d="M 100 210 Q 500 130 900 210"
+        fill="none"
+      />
+      <text>
+        <textPath href="#horizonPath" startOffset="50%" text-anchor="middle">
+          RAT REALM
+        </textPath>
+      </text>
+    </svg>
+
+    <!-- PLANET IMAGE -->
     <img
       src="B9A52788-D82C-425A-B3BC-4073B1DD7AA7.png"
       alt="Rat Realm Planet"
       class="planet"
     >
+
   </div>
 
 </body>
